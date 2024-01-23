@@ -1,0 +1,27 @@
+---
+import Footer from "../components/Footer.tsx";
+import "../styles/global.css";
+
+type Props = {
+    title: string;
+};
+
+const { title } = Astro.props;
+---
+
+<html lang="en" class="dark">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <meta name="description" content="ZTC.ninja forwarder" />
+        <title>{title}</title>
+    </head>
+    <body>
+        <main>
+            <slot> Under construction</slot>
+            <Footer client:load />
+        </main>
+    </body>
+</html>
